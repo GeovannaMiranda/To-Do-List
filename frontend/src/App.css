@@ -1,0 +1,158 @@
+/* Estilos customizados para a aplicação Todo */
+
+.App {
+  text-align: center;
+}
+
+/* Animações suaves para transições */
+.task-card {
+  transition: all 0.3s ease-in-out;
+}
+
+.task-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+}
+
+/* Estilo para tarefas concluídas */
+.completed-task {
+  opacity: 0.7;
+  background-color: #f5f5f5;
+}
+
+.completed-task .task-title {
+  text-decoration: line-through;
+  color: #666;
+}
+
+/* Animação para o loading */
+.loading-spinner {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Responsividade para dispositivos móveis */
+@media (max-width: 768px) {
+  .task-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .task-card {
+    margin-bottom: 16px;
+  }
+  
+  .app-bar-title {
+    font-size: 1.2rem;
+  }
+}
+
+/* Estilo para o formulário de tarefas */
+.task-form {
+  padding: 24px;
+}
+
+.task-form .form-field {
+  margin-bottom: 16px;
+}
+
+/* Estilo para categorias */
+.category-chip {
+  margin: 4px;
+  font-weight: 500;
+}
+
+/* Estilo para botões de ação */
+.action-button {
+  transition: all 0.2s ease-in-out;
+}
+
+.action-button:hover {
+  transform: scale(1.05);
+}
+
+/* Estilo para o header da aplicação */
+.app-header {
+  background: linear-gradient(135deg, #510C76 0%, #510C76 100%);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para cards de tarefa */
+.task-card-content {
+  padding: 16px;
+  border-left: 4px solid #510C76;
+}
+
+.task-card-content.completed {
+  border-left-color: #4caf50;
+}
+
+/* Animação para entrada de novos elementos */
+.fade-in {
+  animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Estilo para o container principal */
+.main-container {
+  min-height: 100vh;
+  background-color: #f5f5f5;
+}
+
+/* Estilo para o formulário de autenticação */
+.auth-form {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 32px;
+  margin-top: 64px;
+}
+
+/* Estilo para mensagens de erro */
+.error-message {
+  color: #d32f2f;
+  font-size: 0.875rem;
+  margin-top: 8px;
+}
+
+/* Estilo para estatísticas */
+.stats-container {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.stat-card {
+  flex: 1;
+  padding: 16px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.stat-number {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #510C76;
+}
+
+.stat-label {
+  font-size: 0.875rem;
+  color: #666;
+  margin-top: 4px;
+}
+
